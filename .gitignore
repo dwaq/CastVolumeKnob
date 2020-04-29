@@ -5,3 +5,4 @@ castenv/
 netscan.py
 wificonf.py
 .idea/
+*.bin
