@@ -45,7 +45,7 @@ To wake it up you have to tap the knob once. After it wakes up it automatically 
 
 * deploy the firmware
     ```shell
-    esptool.py --port COM5 --baud 460800 write_flash --flash_size=detect 0 esp8266-20170108-v1.8.7.bin
+    esptool.py --port COM5 --baud 460800 write_flash --flash_size=detect 0 esp8266-20191220-v1.12.bin
     ```
 
 * Configuring wificonf.py
