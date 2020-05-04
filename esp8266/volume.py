@@ -139,8 +139,9 @@ class NeoPixelRing(NeoPixel):
         self.write()
 
     def vol2pix(self, volume):
-        pixels = wificonf.neopixel_percents
-        hues =   wificonf.neopixel_hues
+        # this change makes the volume LEDs linear
+        pixels = (6.76, 6.66, 6.66, 6.66, 6.66, 6.66, 6.66, 6.66, 6.66, 6.66, 6.66, 6.66, 6.66, 6.66, 6.66)
+        hues =   (240,210,180,168,156,144,132,120,108,96,84,72,60,30,0)
         for h, p in zip(hues, pixels):
             if (volume/p) > 1:
                 yield (h, 1, 1)
