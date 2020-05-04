@@ -37,7 +37,7 @@ To wake it up you have to tap the knob once. After it wakes up it automatically 
 
 * erase the flash with esptool
     ```shell
-    esptool.py --port COM5 erase_flash
+    esptool.py --port COM11 erase_flash
     ```
 * download the micropython firmware
 
@@ -45,14 +45,14 @@ To wake it up you have to tap the knob once. After it wakes up it automatically 
 
 * deploy the firmware
     ```shell
-    esptool.py --port COM5 --baud 460800 write_flash --flash_size=detect 0 esp8266-20191220-v1.12.bin
+    esptool.py --port COM11 --baud 460800 write_flash --flash_size=detect 0 esp8266-20191220-v1.12.bin
     ```
 
 * Configuring wificonf.py
 
 * put the code to the mcu
     ```shell
-    ampy -p COM5 -b 115200 put     main.py
+    ampy -p COM11 -b 115200 put     main.py
                     boot.py
                     encoder.py
                     wificonf.py
