@@ -29,8 +29,8 @@ def do_connect():
     if not sta_if.isconnected():
         print('connecting to network...')
         sta_if.active(True)
-        sta_if.ifconfig(config)
         # remove this line to discover network info automatically
+        sta_if.ifconfig(config)
         sta_if.connect(ssid, passw)
         while not sta_if.isconnected():
             pass
