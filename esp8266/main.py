@@ -57,7 +57,7 @@ def connect2device(np):
 def main():
     global device
     device = next(chromecast)
-    enc = Encoder(12, 13, clicks=2, reverse=True)
+    enc = Encoder(12, 13, clicks=2, reverse=False)
     np = volume.NeoPixelRing(4, device, machine.Pin(15), 16)
     button = machine.Pin(5, machine.Pin.IN)
     cast = connect2device(np)
